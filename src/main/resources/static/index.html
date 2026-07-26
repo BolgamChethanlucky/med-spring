@@ -26,9 +26,13 @@
     <div class="flex flex-col items-center gap-5">
       <a href="index.html" class="nav-index-link mobile-nav-item text-3xl font-instrument text-white/90 hover:text-blue-400 transition-colors">Index</a>
       <a href="about.html" class="mobile-nav-item text-3xl font-instrument text-white/90 hover:text-blue-400 transition-colors">About Us</a>
-      <a href="services.html" class="mobile-nav-item text-3xl font-instrument text-white/90 hover:text-blue-400 transition-colors">Services</a>
+      <a href="contact.html" class="mobile-nav-item text-3xl font-instrument text-white/90 hover:text-blue-400 transition-colors">Contact Us</a>
       <a href="book-appointment.html" class="mobile-nav-item text-2xl font-instrument text-blue-400 hover:text-white transition-colors">Book Appointment</a>
       <a href="order-medicines.html" class="mobile-nav-item text-2xl font-instrument text-green-400 hover:text-white transition-colors">Order Medicines</a>
+      <button id="mobile-consult-btn" class="mobile-nav-item text-2xl font-instrument text-blue-400 hover:text-white transition-colors flex items-center gap-2 mt-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></span>
+        Consult AI Pharmacist
+      </button>
     </div>
     
     <div class="flex flex-col items-center gap-4 mt-8 w-full px-10">
@@ -47,7 +51,7 @@
     <div class="hidden md:flex pointer-events-auto liquid-glass rounded-full px-6 py-2.5 items-center space-x-6">
       <a href="index.html" class="nav-index-link text-sm font-medium text-white hover:text-white transition-colors">Index</a>
       <a href="about.html" class="text-sm font-medium text-white/70 hover:text-white transition-colors">About Us</a>
-      <a href="services.html" class="text-sm font-medium text-white/70 hover:text-white transition-colors">Services</a>
+      <a href="contact.html" class="text-sm font-medium text-white/70 hover:text-white transition-colors">Contact Us</a>
       <span class="w-[1px] h-4 bg-white/20"></span>
       <a href="book-appointment.html" class="text-sm font-medium text-blue-400 hover:text-white transition-colors">Book Appointment</a>
       <a href="order-medicines.html" class="text-sm font-medium text-green-400 hover:text-white transition-colors">Order Medicines</a>
@@ -92,7 +96,6 @@
           <button type="submit" class="liquid-glass rounded-full px-6 py-3 text-sm font-medium hover:bg-white/10 transition-colors">Search</button>
         </form>
         
-        <!-- Animated Search Bar Subtitle -->
         <p class="text-white/60 text-xs sm:text-sm font-mono mt-3 tracking-wider text-center uppercase animate-fade-in-up opacity-0 [animation-delay:300ms]">
           Search over 40+ symptoms, OTC medications, and Hyderabad specialists
         </p>
@@ -126,235 +129,226 @@
     <!-- Interactive Dictionary Container -->
     <section id="az-directory" class="w-full max-w-5xl mx-auto mb-16 hidden opacity-0 transition-opacity duration-500 relative" aria-live="polite"></section>
 
-    <section id="guide" class="w-full max-w-5xl text-center border-t border-white/10 pt-16 mt-auto">
+    <section id="guide" class="w-full max-w-6xl text-center border-t border-white/10 pt-16 mt-auto px-4">
       <h2 class="font-instrument text-4xl sm:text-5xl text-white mb-10">Reading the ledger</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+        
         <div class="liquid-glass rounded-2xl p-6">
           <span class="stamp tone-sage">MINOR</span>
           <h3 class="font-medium text-lg mb-2 mt-4 text-white">Self-care</h3>
-          <p class="text-white/60 text-sm">Common, self-limiting complaints. Home care and general OTC categories usually enough.</p>
+          <p class="text-white/60 text-sm">Common, self-limiting complaints. Home care and general OTC categories are usually enough.</p>
         </div>
+
         <div class="liquid-glass rounded-2xl p-6">
           <span class="stamp tone-amber">PHYSICIAN</span>
           <h3 class="font-medium text-lg mb-2 mt-4 text-white">See a doctor</h3>
-          <p class="text-white/60 text-sm">Needs an actual diagnosis or prescription. We describe management, not doses.</p>
+          <p class="text-white/60 text-sm">Needs an actual diagnosis or prescription. We describe how it's managed — never a dose.</p>
         </div>
+
+        <div class="liquid-glass rounded-2xl p-6">
+          <span class="stamp tone-rust">EMERGENCY</span>
+          <h3 class="font-medium text-lg mb-2 mt-4 text-white">Act now</h3>
+          <p class="text-white/60 text-sm">Call emergency services immediately. No home remedy belongs on this card.</p>
+        </div>
+
+        <div class="liquid-glass rounded-2xl p-6">
+          <span class="stamp tone-rust">CRISIS</span>
+          <h3 class="font-medium text-lg mb-2 mt-4 text-white">Reach out now</h3>
+          <p class="text-white/60 text-sm">A mental health crisis. A crisis line and immediate support — nothing else.</p>
+        </div>
+
       </div>
     </section>
   </main>
 
-  <footer class="mt-auto text-center border-t border-white/10 py-10 w-full text-white/40 text-xs font-light bg-black relative z-40">
-    <p>General information only — not a diagnosis or medical advice. When in doubt, ask a professional.</p>
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="mt-auto text-center border-t border-white/10 py-16 w-full text-white/60 bg-black relative z-40 flex flex-col items-center justify-center gap-5">
+    <div class="text-2xl font-extrabold tracking-tight text-white flex items-center">
+      Anamnesis<span class="text-amber-400">.</span>
+    </div>
+    <p class="text-white/60 text-sm max-w-md font-light">
+      Connecting patients with verified medical indexing, rapid pharmacy dispatch, and top Hyderabad specialists.
+    </p>
+    <div class="flex items-center gap-4 text-white/70 my-2">
+      <!-- Facebook -->
+      <a href="https://facebook.com" target="_blank" class="w-10 h-10 rounded-full liquid-glass flex items-center justify-center hover:text-blue-400 hover:bg-white/10 transition-colors">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      <!-- Instagram -->
+      <a href="https://instagram.com" target="_blank" class="w-10 h-10 rounded-full liquid-glass flex items-center justify-center hover:text-pink-400 hover:bg-white/10 transition-colors">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <!-- LinkedIn -->
+      <a href="https://linkedin.com" target="_blank" class="w-10 h-10 rounded-full liquid-glass flex items-center justify-center hover:text-blue-500 hover:bg-white/10 transition-colors">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.762-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+      </a>
+      <!-- GitHub -->
+      <a href="https://github.com" target="_blank" class="w-10 h-10 rounded-full liquid-glass flex items-center justify-center hover:text-white hover:bg-white/10 transition-colors">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+      </a>
+    </div>
+    <p class="text-white/40 text-xs font-light">
+      &copy; 2026 Anamnesis. All Rights Reserved.
+    </p>
   </footer>
 
-  <!-- ==================== APPOINTMENT BOOKING MODAL ==================== -->
-  <div id="booking-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300">
-    <div class="liquid-glass rounded-3xl w-full max-w-lg p-8 sm:p-10 relative transform scale-95 transition-transform duration-300 m-4" id="booking-modal-content">
-      <button id="close-modal-btn" class="absolute top-6 right-6 text-white/40 hover:text-white transition-colors">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-      </button>
-      <h3 class="text-2xl font-bold text-white mb-1">Book Visit</h3>
-      <p class="text-blue-400 text-xs uppercase tracking-widest font-mono mb-4 pb-4 border-b border-white/10" id="modal-doctor-info">Doctor Name • Hospital</p>
-      
-      <div id="doctor-map-box" class="mb-6 bg-white/5 border border-white/10 rounded-2xl p-3 flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
-        </div>
-        <div class="flex-1 overflow-hidden">
-          <p id="modal-hospital-loc" class="text-white text-xs font-bold truncate">Hospital Location</p>
-          <span class="text-[10px] text-white/50 font-mono">📍 Hyderabad, Telangana (In-person & Video available)</span>
-        </div>
-      </div>
+  <!-- ==================== MODALS & DRAWERS ==================== -->
 
-      <form id="appointment-form" class="flex flex-col gap-4">
-        <input type="text" id="apt-name" required placeholder="Full Name" class="bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-blue-500 placeholder-white/40 text-sm transition-colors">
-        <input type="tel" id="apt-phone" required placeholder="Phone Number" class="bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-blue-500 placeholder-white/40 text-sm transition-colors">
-        <input type="email" id="apt-email" required placeholder="Email Address" class="bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-blue-500 placeholder-white/40 text-sm transition-colors">
-        <div class="flex gap-4">
-          <input type="date" id="apt-date" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-blue-500 text-sm transition-colors [color-scheme:dark]">
-          <input type="time" id="apt-time" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-blue-500 text-sm transition-colors [color-scheme:dark]">
-        </div>
-        <button type="submit" id="apt-submit-btn" class="mt-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl px-6 py-4 text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)]">
-          Confirm Booking
-        </button>
-      </form>
-    </div>
-  </div>
-
-  <!-- ==================== MEDICINE ORDER MODAL ==================== -->
-  <div id="order-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300">
-    <div class="liquid-glass rounded-3xl w-full max-w-md p-6 sm:p-8 relative transform scale-95 transition-transform duration-300 m-4 border border-blue-500/20 shadow-[0_0_50px_rgba(37,99,235,0.1)]" id="order-modal-content">
-      <button id="close-order-modal-btn" class="absolute top-6 right-6 text-white/40 hover:text-white transition-colors z-10">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-      </button>
-      <div class="flex items-center gap-3 mb-6 border-b border-white/10 pb-4">
-        <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-        </div>
-        <h3 class="text-2xl font-bold text-white">Your Cart</h3>
-      </div>
-      <div class="bg-white/5 border border-white/10 rounded-2xl p-4 mb-6 flex items-center gap-4">
-        <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-white/10 flex items-center justify-center shrink-0">
-          <svg class="w-6 h-6 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-        </div>
-        <div class="flex-1 overflow-hidden">
-          <h4 id="modal-medicine-name" class="font-bold text-white text-sm truncate">Medicine Name</h4>
-          <p id="modal-medicine-unit-price" class="text-blue-300 text-xs font-mono">₹0 / unit</p>
-        </div>
-        <div class="flex items-center bg-black/40 rounded-lg p-1 border border-white/10 shrink-0">
-          <button id="qty-minus" class="w-8 h-8 flex items-center justify-center rounded-md hover:bg-white/10 text-white/70 transition-colors">-</button>
-          <span id="qty-display" class="w-6 text-center text-sm font-bold text-white">1</span>
-          <button id="qty-plus" class="w-8 h-8 flex items-center justify-center rounded-md hover:bg-white/10 text-white/70 transition-colors">+</button>
-        </div>
-      </div>
-      <form id="order-form" class="flex flex-col gap-3 mb-6">
-        <input type="text" id="order-name" required placeholder="Full Name" class="bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 placeholder-white/30 text-sm transition-colors">
-        <textarea id="order-address" required placeholder="Delivery Address (Hyderabad)" rows="2" class="bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 placeholder-white/30 text-sm transition-colors resize-none"></textarea>
-        <div class="mt-2 bg-white/5 border border-white/10 rounded-xl p-4 text-sm text-white/60 space-y-2 font-mono">
-          <div class="flex justify-between items-center">
-            <span>Item Subtotal</span>
-            <span id="summary-subtotal" class="text-white">₹0</span>
-          </div>
-          <div class="flex justify-between items-center">
-            <span>Rapid Delivery (14m)</span>
-            <span class="text-green-400">FREE</span>
-          </div>
-          <div class="flex justify-between items-center border-t border-white/10 pt-3 mt-2 text-base text-white font-bold">
-            <span>Grand Total</span>
-            <span id="summary-total" class="text-blue-400">₹0</span>
-          </div>
-        </div>
-        <button type="submit" id="order-submit-btn" class="mt-2 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl px-6 py-4 text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)]">
-          Pay ₹0 & Checkout
-        </button>
-      </form>
-    </div>
-  </div>
-
-  <!-- ==================== AUTHENTICATION MODAL ==================== -->
-  <div id="auth-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300">
-    <div class="liquid-glass rounded-3xl w-full max-w-md p-8 sm:p-10 relative transform scale-95 transition-transform duration-300 m-4" id="auth-modal-content">
-      <button id="close-auth-modal-btn" class="absolute top-6 right-6 text-white/40 hover:text-white transition-colors">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-      </button>
-
-      <h3 id="auth-modal-title" class="text-2xl font-bold text-white mb-2">Welcome Back</h3>
-      <p id="auth-modal-subtitle" class="text-white/60 text-sm font-light mb-6 pb-4 border-b border-white/10">Log in to your Anamnesis account.</p>
-      
-      <form id="auth-form" class="flex flex-col gap-4">
-        <div id="auth-name-container" class="hidden">
-          <input type="text" id="auth-name" placeholder="Full Name" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-blue-500 placeholder-white/40 text-sm transition-colors">
-        </div>
-        <input type="email" id="auth-email" required placeholder="Email Address" class="bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-blue-500 placeholder-white/40 text-sm transition-colors">
-        <input type="password" id="auth-password" required placeholder="Password" class="bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-blue-500 placeholder-white/40 text-sm transition-colors">
-        
-        <button type="submit" id="auth-submit-btn" class="mt-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl px-6 py-4 text-sm tracking-wide transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)]">
-          Log In
-        </button>
-      </form>
-      
-      <div class="mt-6 text-center">
-        <button id="auth-toggle-btn" class="text-blue-400 text-sm hover:text-blue-300 transition-colors">Don't have an account? Sign up</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==================== CONSULT PHARMACIST AI CHAT MODAL ==================== -->
-  <div id="chat-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300">
-    <div class="liquid-glass rounded-3xl w-full max-w-lg p-6 sm:p-8 relative transform scale-95 transition-transform duration-300 m-4 flex flex-col h-[550px] border border-blue-500/30 shadow-[0_0_50px_rgba(37,99,235,0.2)]" id="chat-modal-content">
-      
-      <button id="close-chat-modal-btn" class="absolute top-5 right-5 text-white/40 hover:text-white transition-colors z-10">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-      </button>
-
-      <div class="flex items-center gap-3 pb-4 border-b border-white/10 shrink-0">
-        <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 border border-blue-500/40 relative">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
-          <span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-green-500 border border-black"></span>
-        </div>
-        <div>
-          <h3 class="font-bold text-white text-base">Anamnesis AI Pharmacist</h3>
-          <p class="text-blue-300 text-xs font-mono">Online • Triage & Guidance</p>
-        </div>
-      </div>
-
-      <div id="chat-messages" class="flex-1 overflow-y-auto py-4 space-y-4 pr-2 text-sm">
-        <div class="flex items-start gap-3">
-          <div class="w-7 h-7 rounded-full bg-blue-600/30 border border-blue-400/30 flex items-center justify-center text-xs font-bold text-blue-300 shrink-0">AI</div>
-          <div class="bg-white/5 border border-white/10 rounded-2xl p-3.5 text-white/90 max-w-[80%] leading-relaxed">
-            Hello! I am your virtual apothecary assistant. What symptoms are you experiencing today? You can select a quick chip below or type your query.
-          </div>
-        </div>
-      </div>
-
-      <div class="shrink-0 pt-2 pb-3 flex flex-wrap gap-2 border-t border-white/10">
-        <span class="text-[10px] uppercase font-mono text-white/40 w-full mb-1">Quick Symptoms:</span>
-        <button class="triage-chip bg-white/5 hover:bg-blue-600/20 border border-white/10 hover:border-blue-500/40 text-xs text-white px-3 py-1.5 rounded-full transition-colors" data-symptom="Severe Headache">headache</button>
-        <button class="triage-chip bg-white/5 hover:bg-blue-600/20 border border-white/10 hover:border-blue-500/40 text-xs text-white px-3 py-1.5 rounded-full transition-colors" data-symptom="Stomach Acid / Heartburn">heartburn</button>
-        <button class="triage-chip bg-white/5 hover:bg-blue-600/20 border border-white/10 hover:border-blue-500/40 text-xs text-white px-3 py-1.5 rounded-full transition-colors" data-symptom="Fever & Cough">fever / cold</button>
-        <button class="triage-chip bg-white/5 hover:bg-blue-600/20 border border-white/10 hover:border-blue-500/40 text-xs text-white px-3 py-1.5 rounded-full transition-colors" data-symptom="Burning Urination">uti / burning</button>
-      </div>
-
-      <form id="chat-form" class="flex items-center gap-2 pt-2 shrink-0 border-t border-white/10">
-        <input type="text" id="chat-input" placeholder="Type your symptoms here..." class="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 placeholder-white/30 text-sm transition-colors">
-        <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white rounded-xl px-5 py-3 font-semibold text-sm transition-colors">Send</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- ==================== USER DASHBOARD DRAWER ==================== -->
-  <div id="user-ledger-drawer" class="fixed inset-0 z-[110] flex justify-end bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300">
-    <div class="w-full max-w-md bg-[#0a0a0c] border-l border-white/10 h-full p-6 sm:p-8 flex flex-col transform translate-x-full transition-transform duration-300 shadow-2xl overflow-y-auto" id="user-ledger-content">
-      
-      <div class="flex justify-between items-center pb-6 border-b border-white/10 shrink-0">
+  <!-- Consult Pharmacist AI Chat Modal -->
+  <div id="chat-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-[60] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
+    <div id="chat-modal-content" class="liquid-glass rounded-3xl w-full max-w-lg overflow-hidden flex flex-col h-[550px] transform scale-95 transition-transform duration-300 border border-white/10">
+      <div class="p-5 border-b border-white/10 flex justify-between items-center bg-white/5">
         <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-blue-600/20 border border-blue-500/40 flex items-center justify-center text-blue-400 font-bold" id="drawer-user-initials">U</div>
+          <div class="w-3 h-3 rounded-full bg-blue-500 animate-pulse"></div>
+          <h3 class="font-instrument text-2xl text-white">Anamnesis AI Pharmacist</h3>
+        </div>
+        <button id="close-chat-modal-btn" class="w-8 h-8 rounded-full liquid-glass flex items-center justify-center text-white/70 hover:text-white">✕</button>
+      </div>
+      <div id="chat-messages" class="flex-1 p-5 overflow-y-auto space-y-4 text-sm">
+        <div class="flex items-start gap-3">
+          <div class="w-7 h-7 rounded-full bg-blue-600/35 border border-blue-400/40 text-blue-300 flex items-center justify-center text-xs font-bold shrink-0">AI</div>
+          <div class="bg-white/5 border border-white/10 text-white/90 rounded-2xl p-3.5 max-w-[80%] leading-relaxed">
+            Hello! I am your clinical triage assistant. How can I help you today? You can select a quick symptom below or type your query.
+          </div>
+        </div>
+      </div>
+      <div class="p-3 border-t border-white/10 bg-white/5 flex gap-2 overflow-x-auto hide-scrollbar">
+        <button type="button" data-symptom="Severe headache" class="triage-chip text-xs bg-white/5 hover:bg-white/10 border border-white/10 px-3 py-1.5 rounded-full shrink-0 text-white/80">Headache</button>
+        <button type="button" data-symptom="Burning urination UTI" class="triage-chip text-xs bg-white/5 hover:bg-white/10 border border-white/10 px-3 py-1.5 rounded-full shrink-0 text-white/80">Burning Urination</button>
+        <button type="button" data-symptom="Severe acid reflux heartburn" class="triage-chip text-xs bg-white/5 hover:bg-white/10 border border-white/10 px-3 py-1.5 rounded-full shrink-0 text-white/80">Acid Reflux</button>
+        <button type="button" data-symptom="Fever and body ache" class="triage-chip text-xs bg-white/5 hover:bg-white/10 border border-white/10 px-3 py-1.5 rounded-full shrink-0 text-white/80">Fever</button>
+      </div>
+      <form id="chat-form" class="p-4 border-t border-white/10 flex gap-2 bg-black/40">
+        <input type="text" id="chat-input" placeholder="Describe your symptoms..." class="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 placeholder-white/40">
+        <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white px-5 rounded-xl font-medium text-sm transition-colors">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Authentication Modal (Login / Signup) -->
+  <div id="auth-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-[60] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
+    <div id="auth-modal-content" class="liquid-glass rounded-3xl w-full max-w-md p-8 transform scale-95 transition-transform duration-300 border border-white/10 relative">
+      <button id="close-auth-modal-btn" class="absolute top-6 right-6 w-8 h-8 rounded-full liquid-glass flex items-center justify-center text-white/70 hover:text-white">✕</button>
+      <h3 id="auth-modal-title" class="font-instrument text-4xl text-white mb-2">Welcome Back</h3>
+      <p id="auth-modal-subtitle" class="text-white/60 text-sm mb-6 font-light">Log in to your Anamnesis account.</p>
+      <form id="auth-form" class="space-y-4">
+        <div id="auth-name-container" class="hidden">
+          <label class="block text-xs font-mono uppercase text-white/50 mb-2">Full Name</label>
+          <input type="text" id="auth-name" placeholder="Chethan" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-blue-500 placeholder-white/30">
+        </div>
+        <div>
+          <label class="block text-xs font-mono uppercase text-white/50 mb-2">Email Address</label>
+          <input type="email" id="auth-email" required placeholder="name@example.com" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-blue-500 placeholder-white/30">
+        </div>
+        <div>
+          <label class="block text-xs font-mono uppercase text-white/50 mb-2">Password</label>
+          <input type="password" id="auth-password" required placeholder="••••••••" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-blue-500 placeholder-white/30">
+        </div>
+        <button type="submit" id="auth-submit-btn" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-xl py-4 text-sm transition-colors shadow-[0_0_20px_rgba(37,99,235,0.3)] mt-2">Log In</button>
+      </form>
+      <div class="mt-6 text-center">
+        <button type="button" id="auth-toggle-btn" class="text-xs text-blue-400 hover:text-blue-300 font-mono">Don't have an account? Sign up</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Doctor Booking Modal -->
+  <div id="booking-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-[60] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
+    <div id="booking-modal-content" class="liquid-glass rounded-3xl w-full max-w-lg p-8 transform scale-95 transition-transform duration-300 border border-white/10 relative">
+      <button id="close-modal-btn" class="absolute top-6 right-6 w-8 h-8 rounded-full liquid-glass flex items-center justify-center text-white/70 hover:text-white">✕</button>
+      <span class="stamp tone-amber mb-3">APPOINTMENT SCHEDULER</span>
+      <h3 class="font-instrument text-3xl text-white mb-2">Confirm Specialist Visit</h3>
+      <p id="modal-doctor-info" class="text-white/60 text-sm mb-6 font-light">Doctor • Hospital • Price</p>
+      <form id="appointment-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-mono uppercase text-white/50 mb-2">Select Date</label>
+          <input type="date" id="apt-date" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500">
+        </div>
+        <div>
+          <label class="block text-xs font-mono uppercase text-white/50 mb-2">Preferred Slot</label>
+          <select id="apt-time" class="w-full bg-[#121315] border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500">
+            <option value="10:00 AM">10:00 AM - Morning Slot</option>
+            <option value="12:30 PM">12:30 PM - Afternoon Slot</option>
+            <option value="04:30 PM">04:30 PM - Evening Slot</option>
+            <option value="07:00 PM">07:00 PM - Night Slot</option>
+          </select>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 text-xs text-white/70 space-y-1">
+          <div class="flex justify-between"><span>Hospital Location:</span><span id="modal-hospital-loc" class="text-white font-medium">Jubilee Hills</span></div>
+          <div class="flex justify-between"><span>Platform Fee:</span><span class="text-green-400">Free</span></div>
+        </div>
+        <button type="submit" id="apt-submit-btn" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-xl py-4 text-sm transition-colors shadow-[0_0_20px_rgba(37,99,235,0.3)] mt-2">Confirm Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Medicine Order Modal -->
+  <div id="order-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-[60] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
+    <div id="order-modal-content" class="liquid-glass rounded-3xl w-full max-w-md p-8 transform scale-95 transition-transform duration-300 border border-white/10 relative">
+      <button id="close-order-modal-btn" class="absolute top-6 right-6 w-8 h-8 rounded-full liquid-glass flex items-center justify-center text-white/70 hover:text-white">✕</button>
+      <span class="stamp tone-sage mb-3">14-MINUTE PHARMACY DISPATCH</span>
+      <h3 id="modal-medicine-name" class="font-instrument text-3xl text-white mb-1">Paracetamol 500mg</h3>
+      <p id="modal-medicine-unit-price" class="text-blue-400 font-mono text-xs mb-6">₹50 / unit</p>
+      <form id="order-form" class="space-y-5">
+        <div class="flex items-center justify-between bg-white/5 border border-white/10 rounded-2xl p-4">
+          <span class="text-sm font-medium text-white/80">Quantity (Units)</span>
+          <div class="flex items-center gap-3">
+            <button type="button" id="qty-minus" class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-white hover:bg-white/20">-</button>
+            <span id="qty-display" class="font-mono text-base font-bold text-white w-6 text-center">1</span>
+            <button type="button" id="qty-plus" class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-white hover:bg-white/20">+</button>
+          </div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 text-xs text-white/70 space-y-2">
+          <div class="flex justify-between"><span>Delivery Address:</span><span class="text-white font-medium">Hyderabad, TS</span></div>
+          <div class="flex justify-between"><span>Estimated Time:</span><span class="text-green-400 font-bold">⚡ 14 mins</span></div>
+          <div class="border-t border-white/10 pt-2 flex justify-between font-bold text-white text-sm"><span>Total Amount:</span><span id="summary-total" class="text-green-400">₹50</span></div>
+        </div>
+        <input type="hidden" id="summary-subtotal" value="50">
+        <button type="submit" id="order-submit-btn" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-xl py-4 text-sm transition-colors shadow-[0_0_20px_rgba(37,99,235,0.3)]">Pay & Checkout</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- User Dashboard / Ledger Drawer -->
+  <div id="user-ledger-drawer" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[70] flex justify-end opacity-0 pointer-events-none transition-opacity duration-300">
+    <div id="user-ledger-content" class="w-full max-w-md bg-[#0d0e11] border-l border-white/10 h-full p-6 flex flex-col transform translate-x-full transition-transform duration-300 overflow-y-auto">
+      <div class="flex justify-between items-center mb-6 pb-4 border-b border-white/10">
+        <div class="flex items-center gap-3">
+          <div id="drawer-user-initials" class="w-10 h-10 rounded-full bg-blue-600/30 border border-blue-400/40 text-blue-300 flex items-center justify-center font-bold text-sm">C</div>
           <div>
-            <h3 id="drawer-user-name" class="font-bold text-white text-base">User Profile</h3>
-            <p class="text-blue-400 text-xs font-mono">Personal Apothecary Ledger</p>
+            <h4 id="drawer-user-name" class="font-bold text-white text-base">Chethan</h4>
+            <span class="text-xs text-white/40 font-mono">Anamnesis Member</span>
           </div>
         </div>
-        <button id="close-ledger-btn" class="text-white/40 hover:text-white transition-colors">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-        </button>
+        <button id="close-ledger-btn" class="w-8 h-8 rounded-full liquid-glass flex items-center justify-center text-white/70 hover:text-white">✕</button>
       </div>
-
-      <div class="py-6 space-y-8 flex-1">
-        <div>
-          <h4 class="text-xs font-mono text-white/40 uppercase tracking-widest mb-3 flex items-center gap-2">
-            <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
-            Bookmarked Ailments (<span id="bookmark-count">0</span>)
-          </h4>
-          <div id="bookmarked-list" class="space-y-2">
-            <p class="text-white/30 text-xs italic bg-white/5 p-3 rounded-xl">No saved ailments yet. Click the bookmark icon on any index card.</p>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="text-xs font-mono text-white/40 uppercase tracking-widest mb-3 flex items-center gap-2">
-            <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-            Booked Appointments (<span id="booking-count">0</span>)
-          </h4>
-          <div id="user-bookings-list" class="space-y-3">
-            <p class="text-white/30 text-xs italic bg-white/5 p-3 rounded-xl">No appointments booked yet.</p>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="text-xs font-mono text-white/40 uppercase tracking-widest mb-3 flex items-center gap-2">
-            <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
-            Active Orders (<span id="order-count">0</span>)
-          </h4>
-          <div id="user-orders-list" class="space-y-3">
-            <p class="text-white/30 text-xs italic bg-white/5 p-3 rounded-xl">No medicine orders placed yet.</p>
-          </div>
+      
+      <!-- Saved Ailments Bookmarks Section -->
+      <div class="mb-6">
+        <h5 class="text-xs font-mono uppercase text-white/40 tracking-wider mb-3 flex justify-between"><span>Saved Ailments</span><span id="bookmark-count" class="text-blue-400">0</span></h5>
+        <div id="bookmarked-list" class="space-y-2">
+          <p class="text-white/30 text-xs italic bg-white/5 p-3 rounded-xl">No saved ailments yet.</p>
         </div>
       </div>
 
-      <div class="pt-4 border-t border-white/10 shrink-0">
-        <button id="logout-btn" class="w-full py-3 rounded-xl bg-red-500/10 hover:bg-red-500/20 text-red-400 font-medium border border-red-500/30 transition-colors text-sm">
-          Log Out
-        </button>
+      <!-- Booked Appointments Section -->
+      <div class="mb-6">
+        <h5 class="text-xs font-mono uppercase text-white/40 tracking-wider mb-3 flex justify-between"><span>My Appointments</span><span id="booking-count" class="text-blue-400">0</span></h5>
+        <div id="user-bookings-list" class="space-y-2">
+          <p class="text-white/30 text-xs italic bg-white/5 p-3 rounded-xl">No appointments booked yet.</p>
+        </div>
+      </div>
+
+      <!-- Medicine Orders Section -->
+      <div class="mb-6">
+        <h5 class="text-xs font-mono uppercase text-white/40 tracking-wider mb-3 flex justify-between"><span>Medicine Orders</span><span id="order-count" class="text-green-400">0</span></h5>
+        <div id="user-orders-list" class="space-y-2">
+          <p class="text-white/30 text-xs italic bg-white/5 p-3 rounded-xl">No medicine orders placed yet.</p>
+        </div>
+      </div>
+
+      <div class="mt-auto pt-6 border-t border-white/10">
+        <button id="logout-btn" class="w-full py-3 rounded-xl border border-red-500/30 text-red-400 hover:bg-red-500/10 text-xs font-mono uppercase tracking-wider transition-colors">Log Out</button>
       </div>
     </div>
   </div>

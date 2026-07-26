@@ -24,7 +24,7 @@
       </div>
     </button>
     <div class="flex flex-col items-center gap-5">
-      <a href="index.html" class="mobile-nav-item text-3xl font-instrument text-white/70 hover:text-blue-400 transition-colors">Index</a>
+      <a href="index.html" class="mobile-nav-item text-3xl font-instrument text-white/70 hover:text-blue-400 transition-colors">Home</a>
       <a href="about.html" class="mobile-nav-item text-3xl font-instrument text-white/70 hover:text-blue-400 transition-colors">About Us</a>
       <a href="contact.html" class="mobile-nav-item text-3xl font-instrument text-white transition-colors">Contact Us</a>
       <a href="book-appointment.html" class="mobile-nav-item text-2xl font-instrument text-blue-400 hover:text-white transition-colors">Book Appointment</a>
@@ -40,7 +40,7 @@
 
     <!-- Center Links & Direct Actions -->
     <div class="hidden md:flex pointer-events-auto liquid-glass rounded-full px-6 py-2.5 items-center space-x-6">
-      <a href="index.html" class="text-sm font-medium text-white/70 hover:text-white transition-colors">Index</a>
+      <a href="index.html" class="text-sm font-medium text-white/70 hover:text-white transition-colors">Home</a>
       <a href="about.html" class="text-sm font-medium text-white/70 hover:text-white transition-colors">About Us</a>
       <a href="contact.html" class="text-sm font-medium text-white transition-colors">Contact Us</a>
       <span class="w-[1px] h-4 bg-white/20"></span>
@@ -172,7 +172,6 @@
   </footer>
 
   <script>
-    // Mobile menu toggle
     const openBtn = document.getElementById('open-menu-btn');
     const closeBtn = document.getElementById('close-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -194,7 +193,6 @@
     if(closeBtn) closeBtn.addEventListener('click', () => toggleMenu(false));
     navItems.forEach(item => item.addEventListener('click', () => toggleMenu(false)));
 
-    // Form success simulations
     document.getElementById('query-form').addEventListener('submit', (e) => {
       e.preventDefault();
       const btn = document.getElementById('query-submit-btn');

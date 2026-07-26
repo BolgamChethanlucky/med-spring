@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anamesis — Apothecary Index</title>
+  
+  <!-- Fonts: Inter & Instrument Serif -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body class="bg-black text-white font-inter overflow-x-hidden min-h-screen flex flex-col">
+
+  <!-- ==================== MOBILE MENU (z-55) ==================== -->
+  <div id="mobile-menu" class="fixed inset-0 bg-[#0a0a0a] z-[55] flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-500">
+    <button id="close-menu-btn" class="absolute top-6 right-5 sm:right-8 liquid-glass w-10 h-10 rounded-full flex items-center justify-center transition-transform duration-500 -rotate-90 scale-50">
+      <div class="relative w-4 h-4">
+        <span class="absolute top-1/2 left-0 w-full h-[1.5px] bg-white rotate-45 -translate-y-1/2"></span>
+        <span class="absolute top-1/2 left-0 w-full h-[1.5px] bg-white -rotate-45 -translate-y-1/2"></span>
+      </div>
+    </button>
+    <div class="flex flex-col items-center gap-6">
+      <a href="index.html" class="mobile-nav-item text-3xl sm:text-4xl font-medium text-white/90">Index</a>
+      <a href="about.html" class="mobile-nav-item text-3xl sm:text-4xl font-medium text-white/90">About Us</a>
+      <a href="services.html" class="mobile-nav-item text-3xl sm:text-4xl font-medium text-white/90">Services</a>
+      <a href="contact.html" class="mobile-nav-item text-3xl sm:text-4xl font-medium text-white/90">Reach Us</a>
+    </div>
+    <button class="mobile-nav-item mt-10 liquid-glass rounded-full px-6 py-3 flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-green-400"></span>
+      <span class="text-sm font-medium text-white">Consult Pharmacist</span>
+    </button>
+  </div>
+
+  <!-- ==================== NAVIGATION (z-50) ==================== -->
+  <nav class="fixed top-0 w-full z-50 flex items-center justify-between px-5 pt-6 sm:px-8 sm:pt-8 md:px-16 lg:px-20 pointer-events-none">
+    <!-- Logo -->
+    <div class="pointer-events-auto cursor-pointer">
+      <svg width="28" height="28" viewBox="0 0 256 256" fill="white">
+        <path d="M 256 64 L 256 128 L 192.5 128 L 160 95 L 128 64 L 96 95 L 63.5 128 L 64 128 L 128 192 L 128 256 L 64.5 256 L 32 223 L 0 192 L 0 64 L 64 0 L 192 0 Z M 256 192 L 256 256 L 192.5 256 L 160 223 L 128 192 L 128 128 L 192 128 Z"/>
+      </svg>
+    </div>
+
+    <!-- Desktop Center Pill (Multi-Page Links) -->
+    <div class="hidden md:flex pointer-events-auto liquid-glass rounded-full px-8 py-3 items-center space-x-8">
+      <a href="index.html" class="text-sm font-medium text-white hover:text-white transition-colors">Index</a>
+      <a href="about.html" class="text-sm font-medium text-white/70 hover:text-white transition-colors">About Us</a>
+      <a href="services.html" class="text-sm font-medium text-white/70 hover:text-white transition-colors">Services</a>
+      <a href="contact.html" class="text-sm font-medium text-white/70 hover:text-white transition-colors">Reach Us</a>
+    </div>
+
+    <!-- Desktop CTA -->
+    <button class="hidden md:flex pointer-events-auto liquid-glass rounded-full px-5 py-2.5 items-center gap-2 hover:bg-white/10 transition-colors">
+      <span class="w-2 h-2 rounded-full bg-green-400"></span>
+      <span class="text-sm font-medium text-white">Consult Pharmacist</span>
+    </button>
+
+    <!-- Mobile Hamburger -->
+    <button id="open-menu-btn" class="md:hidden pointer-events-auto liquid-glass w-10 h-10 rounded-full flex flex-col items-center justify-center gap-[4px]">
+      <span class="w-5 h-[1.5px] bg-white"></span>
+      <span class="w-3.5 h-[1.5px] bg-white"></span>
+    </button>
+  </nav>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="relative w-full h-screen overflow-hidden bg-[#005f73] flex items-center justify-center">
+    
+    <!-- Layer 1: Parallax Grid (z-0) -->
+    <div id="grid-bg" class="absolute inset-[-10%] z-0 opacity-10 pointer-events-none"></div>
+
+    <!-- Layer 2: Custom Local Medical Image Background (z-10) -->
+    <div class="absolute inset-0 z-10 bg-center bg-cover bg-no-repeat pointer-events-none" style="background-image: url('medical-bg.png');"></div>
+    
+    <!-- Dark Overlay to ensure high contrast for text -->
+    <div class="absolute inset-0 z-15 bg-black/40 pointer-events-none"></div>
+
+    <!-- Layer 3: Hero Text & Search (z-20) -->
+    <div class="absolute inset-0 z-20 flex flex-col items-center justify-center pt-10 pointer-events-none">
+      <h1 class="font-instrument text-[4.5rem] xs:text-[5.5rem] sm:text-[10rem] md:text-[13rem] lg:text-[16rem] leading-[0.9] text-white tracking-tight text-center">
+        Anamesis
+      </h1>
+      
+      <!-- Apothecary Search Bar -->
+      <div class="pointer-events-auto w-full max-w-xl px-5 mt-4 sm:mt-8">
+        <form id="search-form" class="liquid-glass rounded-full flex items-center gap-3 p-2 pl-5 relative" role="search" autocomplete="off">
+          <svg class="w-5 h-5 text-white/70" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" /><path d="M20 20L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+          <input id="search-input" type="text" class="flex-1 bg-transparent border-none text-white text-base md:text-lg focus:outline-none placeholder-white/60" placeholder="Try “headache”, “UTI”..." role="combobox" aria-expanded="false"/>
+          <button type="submit" class="liquid-glass rounded-full px-6 py-3 text-sm font-medium hover:bg-white/10 transition-colors">Search</button>
+          
+          <!-- Dropdown -->
+          <ul id="suggestions" class="liquid-glass rounded-2xl absolute top-[110%] left-0 right-0 p-2 text-left z-30 shadow-2xl" hidden></ul>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== APOTHECARY CONTENT ==================== -->
+  <main class="relative z-40 bg-black flex flex-col items-center px-5 sm:px-8 py-16 flex-grow">
+    <section id="results" class="w-full max-w-4xl mx-auto mb-16" aria-live="polite"></section>
+    
+    <div id="quick-chips" class="flex flex-wrap justify-center gap-3 mb-16"></div>
+
+    <section id="guide" class="w-full max-w-5xl text-center border-t border-white/10 pt-16">
+      <h2 class="text-3xl font-medium mb-10 font-instrument sm:text-5xl text-white">Reading the ledger</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+        <div class="liquid-glass rounded-2xl p-6">
+          <span class="text-[0.7rem] tracking-widest text-[#a3ba93] border border-[#a3ba93] px-2 py-1 rounded-md">MINOR</span>
+          <h3 class="font-medium text-lg mb-2 mt-4 text-white">Self-care</h3>
+          <p class="text-white/60 text-sm">Common, self-limiting complaints. Home care and general OTC categories usually enough.</p>
+        </div>
+        <div class="liquid-glass rounded-2xl p-6">
+          <span class="text-[0.7rem] tracking-widest text-[#e0a25b] border border-[#e0a25b] px-2 py-1 rounded-md">PHYSICIAN</span>
+          <h3 class="font-medium text-lg mb-2 mt-4 text-white">See a doctor</h3>
+          <p class="text-white/60 text-sm">Needs an actual diagnosis or prescription. We describe management, not doses.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-auto text-center border-t border-white/10 py-10 w-full text-white/40 text-xs font-light bg-black relative z-40">
+    <p>General information only — not a diagnosis or medical advice. When in doubt, ask a professional.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

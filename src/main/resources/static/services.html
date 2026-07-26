@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Natural Wellness Index</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body class="bg-[#0a0a0a] text-white font-inter overflow-x-hidden min-h-screen flex flex-col">
+
+  <!-- Unique Page Background Image -->
+  <div class="fixed inset-0 w-full h-full bg-cover bg-center z-[-2]" style="background-image: url('https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?q=80&w=2000&auto=format&fit=crop');"></div>
+  <div class="fixed inset-0 bg-black/80 z-[-1] pointer-events-none"></div>
+
+  <nav class="fixed top-0 w-full z-50 liquid-glass flex flex-row items-center justify-between px-5 py-4 sm:px-8 md:px-16 lg:px-20 border-b border-white/10">
+    <a href="index.html" class="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
+      <svg width="28" height="28" viewBox="0 0 256 256" fill="white"><path d="M 256 64 L 256 128 L 192.5 128 L 160 95 L 128 64 L 96 95 L 63.5 128 L 64 128 L 128 192 L 128 256 L 64.5 256 L 32 223 L 0 192 L 0 64 L 64 0 L 192 0 Z M 256 192 L 256 256 L 192.5 256 L 160 223 L 128 192 L 128 128 L 192 128 Z"/></svg>
+      <span class="text-lg font-semibold tracking-tight text-white">Apothecary Index</span>
+    </a>
+    <div class="hidden lg:flex items-center space-x-8 text-sm font-medium text-white/70">
+      <a href="index.html" class="hover:text-white transition-colors">Home</a>
+      <a href="about.html" class="hover:text-white transition-colors">About Us</a>
+      <a href="services.html" class="text-white font-semibold transition-colors">Services</a>
+      <a href="contact.html" class="hover:text-white transition-colors">Contact Us</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <button id="menu-btn" class="lg:hidden w-10 h-10 rounded-full liquid-glass flex flex-col items-center justify-center gap-1">
+        <span class="w-5 h-[2px] bg-white"></span>
+        <span class="w-3.5 h-[2px] bg-white"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-neutral-950/95 backdrop-blur-xl flex flex-col items-center justify-center opacity-0 pointer-events-none transition-all duration-300">
+    <button id="close-menu-btn" class="absolute top-6 right-6 w-10 h-10 rounded-full liquid-glass text-white flex items-center justify-center text-xl">✕</button>
+    <div class="flex flex-col items-center gap-6 text-xl font-medium text-white">
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="about.html" class="mobile-link">About Us</a>
+      <a href="services.html" class="mobile-link">Services</a>
+      <a href="contact.html" class="mobile-link">Contact Us</a>
+    </div>
+  </div>
+
+  <main class="flex-grow flex flex-col px-5 sm:px-8 md:px-16 lg:px-20 pb-12 pt-32 max-w-5xl mx-auto w-full">
+    <h1 class="text-4xl sm:text-5xl font-instrument mb-4 text-white">Our Services</h1>
+    <p class="text-white/60 mb-12 font-light">Explore our core holistic offerings tailored to support your wellbeing journey.</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+      <div class="liquid-glass rounded-3xl p-8">
+        <h3 class="font-medium text-xl mb-3 text-white">Holistic Consultation</h3>
+        <p class="text-white/60 text-sm leading-relaxed">A deep dive into your medical history, lifestyle, and goals to build a personalized natural healing roadmap.</p>
+      </div>
+      <div class="liquid-glass rounded-3xl p-8">
+        <h3 class="font-medium text-xl mb-3 text-white">Custom Apothecary</h3>
+        <p class="text-white/60 text-sm leading-relaxed">Bespoke herbal blends, tinctures, and natural supplements crafted specifically for your body's unique needs.</p>
+      </div>
+      <div class="liquid-glass rounded-3xl p-8">
+        <h3 class="font-medium text-xl mb-3 text-white">Ongoing Support</h3>
+        <p class="text-white/60 text-sm leading-relaxed">Continuous monitoring and adjustments to your wellness plan to ensure you are always moving toward optimal health.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="relative z-10 text-center pb-8 pt-12 border-t border-white/10 mt-auto bg-black/40 backdrop-blur-md">
+    <p class="text-xs text-white/40 font-light tracking-wide">The Apothecary Index · For education, not prescription.</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

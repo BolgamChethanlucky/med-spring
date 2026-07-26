@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anamesis — Order Medicines</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body class="bg-black text-white font-inter overflow-x-hidden min-h-screen flex flex-col">
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="fixed top-0 w-full z-50 flex items-center justify-between px-5 pt-6 sm:px-8 sm:pt-8 md:px-16 lg:px-20 pointer-events-none">
+    <a href="index.html" class="pointer-events-auto cursor-pointer">
+      <svg width="28" height="28" viewBox="0 0 256 256" fill="white">
+        <path d="M 256 64 L 256 128 L 192.5 128 L 160 95 L 128 64 L 96 95 L 63.5 128 L 64 128 L 128 192 L 128 256 L 64.5 256 L 32 223 L 0 192 L 0 64 L 64 0 L 192 0 Z M 256 192 L 256 256 L 192.5 256 L 160 223 L 128 192 L 128 128 L 192 128 Z"/>
+      </svg>
+    </a>
+
+    <div class="hidden md:flex pointer-events-auto liquid-glass rounded-full px-8 py-3 items-center space-x-6">
+      <a href="index.html" class="text-sm font-medium text-white/70 hover:text-white transition-colors">Index</a>
+      <a href="about.html" class="text-sm font-medium text-white/70 hover:text-white transition-colors">About Us</a>
+      <a href="services.html" class="text-sm font-medium text-white/70 hover:text-white transition-colors">Services</a>
+      <a href="book-appointment.html" class="text-sm font-medium text-blue-400 hover:text-white transition-colors">Book Appointment</a>
+      <a href="order-medicines.html" class="text-sm font-medium text-green-400 transition-colors">Order Medicines</a>
+    </div>
+
+    <div class="hidden md:flex pointer-events-auto items-center gap-3">
+      <a href="contact.html" class="liquid-glass rounded-full px-5 py-2.5 text-sm font-medium text-white hover:bg-white/10 transition-colors">Reach Us</a>
+    </div>
+  </nav>
+
+  <!-- ==================== CONTENT ==================== -->
+  <main class="relative z-40 bg-black flex flex-col items-center px-5 sm:px-8 py-32 flex-grow max-w-4xl mx-auto w-full">
+    <h1 class="font-instrument text-5xl sm:text-7xl text-white mb-3 text-center">Rapid Pharmacy Catalog</h1>
+    <p class="text-green-400 font-mono text-xs uppercase tracking-widest mb-12">⚡ Guaranteed 14-Minute Lightning Dispatch across Hyderabad</p>
+    
+    <div class="liquid-glass rounded-3xl p-6 sm:p-8 w-full space-y-4">
+      
+      <div class="flex items-center justify-between p-4 bg-white/5 border border-white/10 rounded-2xl">
+        <div>
+          <h4 class="font-bold text-white text-base">Paracetamol 500mg</h4>
+          <p class="text-xs text-white/60 font-mono">For pain relief and fever management (Stripe of 15)</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="text-sm font-bold text-green-400 font-mono">₹45</span>
+          <button onclick="alert('Paracetamol 500mg added to cart!')" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-4 py-2 rounded-xl text-xs uppercase">Order ⚡</button>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between p-4 bg-white/5 border border-white/10 rounded-2xl">
+        <div>
+          <h4 class="font-bold text-white text-base">Ibuprofen 400mg</h4>
+          <p class="text-xs text-white/60 font-mono">Anti-inflammatory for swelling and body aches</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="text-sm font-bold text-green-400 font-mono">₹60</span>
+          <button onclick="alert('Ibuprofen 400mg added to cart!')" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-4 py-2 rounded-xl text-xs uppercase">Order ⚡</button>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between p-4 bg-white/5 border border-white/10 rounded-2xl">
+        <div>
+          <h4 class="font-bold text-white text-base">Antacid Gel (Digene / Syrup)</h4>
+          <p class="text-xs text-white/60 font-mono">Immediate relief from heartburn and acidity</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="text-sm font-bold text-green-400 font-mono">₹125</span>
+          <button onclick="alert('Antacid Syrup added to cart!')" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-4 py-2 rounded-xl text-xs uppercase">Order ⚡</button>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between p-4 bg-white/5 border border-white/10 rounded-2xl">
+        <div>
+          <h4 class="font-bold text-white text-base">Cetirizine 10mg</h4>
+          <p class="text-xs text-white/60 font-mono">Non-drowsy relief for seasonal allergies and runny nose</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="text-sm font-bold text-green-400 font-mono">₹38</span>
+          <button onclick="alert('Cetirizine added to cart!')" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-4 py-2 rounded-xl text-xs uppercase">Order ⚡</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="mt-auto text-center border-t border-white/10 py-10 w-full text-white/40 text-xs font-light bg-black">
+    <p>General information only — not a diagnosis or medical advice. When in doubt, ask a professional.</p>
+  </footer>
+
+</body>
+</html>

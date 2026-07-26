@@ -1,0 +1,154 @@
+.font-inter { font-family: 'Inter', sans-serif; }
+.font-instrument { font-family: 'Instrument Serif', serif; }
+
+:root {
+  --sage-bright: #a3ba93;
+  --amber-bright: #e0a25b;
+  --rust-bright: #d16a4f;
+}
+
+/* Parallax Grid Background */
+#grid-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 48 0 L 0 0 0 48' fill='none' stroke='%2364748b' stroke-width='0.6'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* Base Liquid Glass Effect */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.01);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: none;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(180deg, 
+    rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%, 
+    rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%, 
+    rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Hide scrollbar for the A-Z navigation bar */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Apothecary Custom Card Styles */
+.index-card { padding: 3rem; border-radius: 24px; margin-top: 2rem; animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Smaller Liquid Glass Summary Cards */
+.summary-card {
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1.5rem; 
+  overflow: hidden; 
+}
+.summary-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-4px);
+}
+
+/* Elevated Local Doctor Hover Card */
+.doctor-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(59, 130, 246, 0.05) 100%);
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05), 0 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.doctor-card:hover {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.06) 0%, rgba(59, 130, 246, 0.15) 100%);
+  border-color: rgba(59, 130, 246, 0.6);
+  transform: translateY(-4px);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 12px 24px -8px rgba(59, 130, 246, 0.4);
+}
+
+/* Medicine Ordering Hover State */
+.medicine-item {
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  margin-left: -0.75rem;
+  transition: all 0.2s ease;
+}
+.medicine-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(4px);
+}
+
+/* Search Dropdown Suggestions */
+.suggestion { display: flex; justify-content: space-between; padding: 0.85rem 1.25rem; border-radius: 12px; cursor: pointer; }
+.suggestion:hover, .suggestion.is-active { background: rgba(255, 255, 255, 0.1); }
+
+/* Bullet Lists */
+.ledger-list li { padding-left: 1rem; position: relative; color: rgba(255,255,255,0.8); margin-bottom:0.5rem;}
+.ledger-list li::before { content: "•"; position: absolute; left: 0; color: rgba(255,255,255,0.4); }
+
+/* A-Z Large Letters */
+.az-letter-header {
+  font-family: 'Instrument Serif', serif;
+  font-size: 3.5rem;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  line-height: 1;
+}
+
+/* Filter Active State */
+.filter-btn.active {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+/* Stamps */
+.stamp {
+  font-size: 0.7rem;
+  font-family: monospace;
+  letter-spacing: 0.15em;
+  padding: 0.3em 0.8em;
+  border: 1.5px solid currentColor;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.tone-sage { color: var(--sage-bright); }
+.tone-amber { color: var(--amber-bright); }
+.tone-rust { color: var(--rust-bright); }
+
+/* Subtitle Fade-In Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

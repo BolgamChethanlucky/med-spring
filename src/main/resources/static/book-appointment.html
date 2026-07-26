@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anamesis — Book Appointment</title>
+  
+  <!-- Fonts: Inter & Instrument Serif -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body class="bg-black text-white font-inter overflow-x-hidden min-h-screen flex flex-col">
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="fixed top-0 w-full z-50 flex items-center justify-between px-5 pt-6 sm:px-8 sm:pt-8 md:px-16 lg:px-20 pointer-events-none">
+    <a href="index.html" class="pointer-events-auto cursor-pointer">
+      <svg width="28" height="28" viewBox="0 0 256 256" fill="white">
+        <path d="M 256 64 L 256 128 L 192.5 128 L 160 95 L 128 64 L 96 95 L 63.5 128 L 64 128 L 128 192 L 128 256 L 64.5 256 L 32 223 L 0 192 L 0 64 L 64 0 L 192 0 Z M 256 192 L 256 256 L 192.5 256 L 160 223 L 128 192 L 128 128 L 192 128 Z"/>
+      </svg>
+    </a>
+
+    <div class="hidden md:flex pointer-events-auto liquid-glass rounded-full px-8 py-3 items-center space-x-6">
+      <a href="index.html" class="text-sm font-medium text-white/70 hover:text-white transition-colors">Index</a>
+      <a href="about.html" class="text-sm font-medium text-white/70 hover:text-white transition-colors">About Us</a>
+      <a href="services.html" class="text-sm font-medium text-white/70 hover:text-white transition-colors">Services</a>
+      <a href="book-appointment.html" class="text-sm font-medium text-blue-400 transition-colors">Book Appointment</a>
+      <a href="order-medicines.html" class="text-sm font-medium text-green-400 hover:text-white transition-colors">Order Medicines</a>
+    </div>
+
+    <div class="hidden md:flex pointer-events-auto items-center gap-3">
+      <a href="contact.html" class="liquid-glass rounded-full px-5 py-2.5 text-sm font-medium text-white hover:bg-white/10 transition-colors">Reach Us</a>
+    </div>
+  </nav>
+
+  <!-- ==================== CONTENT ==================== -->
+  <main class="relative z-40 bg-black flex flex-col items-center px-5 sm:px-8 py-32 flex-grow max-w-4xl mx-auto w-full">
+    
+    <!-- Title using Instrument Serif font -->
+    <h1 class="font-instrument text-6xl sm:text-8xl text-white mb-2 text-center tracking-tight">Book an Appointment</h1>
+    <p class="text-blue-400 font-mono text-xs uppercase tracking-[0.2em] mb-16">📍 Top Specialists Across Hyderabad, Telangana</p>
+    
+    <!-- Doctor Cards Grid matching Index UI -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+      
+      <div class="doctor-card relative overflow-hidden group flex items-start gap-4 p-5 cursor-pointer" onclick="alert('Opening booking portal for Dr. Sudhir Kumar...')">
+        <div class="absolute -inset-2 bg-gradient-to-r from-blue-600/0 via-blue-600/10 to-blue-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg pointer-events-none"></div>
+        <div class="relative shrink-0">
+          <img src="https://i.pravatar.cc/150?u=Dr.+Sudhir+Kumar" class="w-14 h-14 rounded-full object-cover border-2 border-white/10 group-hover:border-blue-400 transition-colors shadow-lg" alt="Dr. Sudhir Kumar">
+          <div class="absolute -bottom-1 -right-1 bg-green-500 rounded-full p-0.5 border-2 border-[#121315]">
+             <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+          </div>
+        </div>
+        <div class="flex flex-col gap-1 overflow-hidden w-full relative z-10">
+          <div class="flex justify-between items-start w-full">
+            <div class="flex flex-col overflow-hidden pr-2">
+              <span class="font-bold text-white text-base truncate">Dr. Sudhir Kumar</span>
+              <span class="text-xs text-blue-300 font-mono truncate">Neurologist • <span class="text-white/60">16 Yrs Exp</span></span>
+            </div>
+            <span class="text-[11px] font-bold uppercase text-white/80 bg-white/10 border border-white/10 px-2 py-0.5 rounded shrink-0">₹950</span>
+          </div>
+          <div class="flex items-center gap-1 text-[11px] text-amber-400 font-mono mt-0.5"><span>⭐ 4.9 (142 reviews)</span></div>
+          <div class="flex justify-between items-end mt-3 gap-2">
+            <span class="text-white/60 text-xs truncate">Apollo Hospitals, Jubilee Hills</span>
+            <button class="text-[10px] font-bold uppercase tracking-wider text-white bg-blue-600 hover:bg-blue-500 px-3 py-1.5 rounded transition-colors shadow-md shadow-blue-500/20 shrink-0">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card relative overflow-hidden group flex items-start gap-4 p-5 cursor-pointer" onclick="alert('Opening booking portal for Dr. Nageshwar Reddy...')">
+        <div class="absolute -inset-2 bg-gradient-to-r from-blue-600/0 via-blue-600/10 to-blue-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg pointer-events-none"></div>
+        <div class="relative shrink-0">
+          <img src="https://i.pravatar.cc/150?u=Dr.+Nageshwar+Reddy" class="w-14 h-14 rounded-full object-cover border-2 border-white/10 group-hover:border-blue-400 transition-colors shadow-lg" alt="Dr. Nageshwar Reddy">
+          <div class="absolute -bottom-1 -right-1 bg-green-500 rounded-full p-0.5 border-2 border-[#121315]">
+             <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+          </div>
+        </div>
+        <div class="flex flex-col gap-1 overflow-hidden w-full relative z-10">
+          <div class="flex justify-between items-start w-full">
+            <div class="flex flex-col overflow-hidden pr-2">
+              <span class="font-bold text-white text-base truncate">Dr. Nageshwar Reddy</span>
+              <span class="text-xs text-blue-300 font-mono truncate">Gastroenterologist • <span class="text-white/60">28 Yrs Exp</span></span>
+            </div>
+            <span class="text-[11px] font-bold uppercase text-white/80 bg-white/10 border border-white/10 px-2 py-0.5 rounded shrink-0">₹1200</span>
+          </div>
+          <div class="flex items-center gap-1 text-[11px] text-amber-400 font-mono mt-0.5"><span>⭐ 5.0 (540 reviews)</span></div>
+          <div class="flex justify-between items-end mt-3 gap-2">
+            <span class="text-white/60 text-xs truncate">AIG Hospitals, Gachibowli</span>
+            <button class="text-[10px] font-bold uppercase tracking-wider text-white bg-blue-600 hover:bg-blue-500 px-3 py-1.5 rounded transition-colors shadow-md shadow-blue-500/20 shrink-0">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card relative overflow-hidden group flex items-start gap-4 p-5 cursor-pointer" onclick="alert('Opening booking portal for Dr. P. V. Murthy...')">
+        <div class="absolute -inset-2 bg-gradient-to-r from-blue-600/0 via-blue-600/10 to-blue-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg pointer-events-none"></div>
+        <div class="relative shrink-0">
+          <img src="https://i.pravatar.cc/150?u=Dr.+P.+V.+Murthy" class="w-14 h-14 rounded-full object-cover border-2 border-white/10 group-hover:border-blue-400 transition-colors shadow-lg" alt="Dr. P. V. Murthy">
+          <div class="absolute -bottom-1 -right-1 bg-green-500 rounded-full p-0.5 border-2 border-[#121315]">
+             <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+          </div>
+        </div>
+        <div class="flex flex-col gap-1 overflow-hidden w-full relative z-10">
+          <div class="flex justify-between items-start w-full">
+            <div class="flex flex-col overflow-hidden pr-2">
+              <span class="font-bold text-white text-base truncate">Dr. P. V. Murthy</span>
+              <span class="text-xs text-blue-300 font-mono truncate">Urologist • <span class="text-white/60">20 Yrs Exp</span></span>
+            </div>
+            <span class="text-[11px] font-bold uppercase text-white/80 bg-white/10 border border-white/10 px-2 py-0.5 rounded shrink-0">₹850</span>
+          </div>
+          <div class="flex items-center gap-1 text-[11px] text-amber-400 font-mono mt-0.5"><span>⭐ 4.9 (210 reviews)</span></div>
+          <div class="flex justify-between items-end mt-3 gap-2">
+            <span class="text-white/60 text-xs truncate">Care Hospitals, Banjara Hills</span>
+            <button class="text-[10px] font-bold uppercase tracking-wider text-white bg-blue-600 hover:bg-blue-500 px-3 py-1.5 rounded transition-colors shadow-md shadow-blue-500/20 shrink-0">Book</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card relative overflow-hidden group flex items-start gap-4 p-5 cursor-pointer" onclick="alert('Opening booking portal for Dr. V. V. Ramana...')">
+        <div class="absolute -inset-2 bg-gradient-to-r from-blue-600/0 via-blue-600/10 to-blue-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg pointer-events-none"></div>
+        <div class="relative shrink-0">
+          <img src="https://i.pravatar.cc/150?u=Dr.+V.+V.+Ramana" class="w-14 h-14 rounded-full object-cover border-2 border-white/10 group-hover:border-blue-400 transition-colors shadow-lg" alt="Dr. V. V. Ramana">
+          <div class="absolute -bottom-1 -right-1 bg-green-500 rounded-full p-0.5 border-2 border-[#121315]">
+             <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+          </div>
+        </div>
+        <div class="flex flex-col gap-1 overflow-hidden w-full relative z-10">
+          <div class="flex justify-between items-start w-full">
+            <div class="flex flex-col overflow-hidden pr-2">
+              <span class="font-bold text-white text-base truncate">Dr. V. V. Ramana</span>
+              <span class="text-xs text-blue-300 font-mono truncate">ENT Specialist • <span class="text-white/60">15 Yrs Exp</span></span>
+            </div>
+            <span class="text-[11px] font-bold uppercase text-white/80 bg-white/10 border border-white/10 px-2 py-0.5 rounded shrink-0">₹750</span>
+          </div>
+          <div class="flex items-center gap-1 text-[11px] text-amber-400 font-mono mt-0.5"><span>⭐ 4.8 (160 reviews)</span></div>
+          <div class="flex justify-between items-end mt-3 gap-2">
+            <span class="text-white/60 text-xs truncate">Yashoda Hospitals, Somajiguda</span>
+            <button class="text-[10px] font-bold uppercase tracking-wider text-white bg-blue-600 hover:bg-blue-500 px-3 py-1.5 rounded transition-colors shadow-md shadow-blue-500/20 shrink-0">Book</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="mt-auto text-center border-t border-white/10 py-10 w-full text-white/40 text-xs font-light bg-black">
+    <p>General information only — not a diagnosis or medical advice. When in doubt, ask a professional.</p>
+  </footer>
+
+</body>
+</html>
